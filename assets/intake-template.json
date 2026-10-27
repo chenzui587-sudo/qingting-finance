@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "case_id": "my-case",
+  "mode": "real",
+  "as_of": null,
+  "taxpayer": {
+    "entity_type": null,
+    "region": null,
+    "vat_status": null,
+    "business_income_method": null,
+    "business_start_month": null
+  },
+  "registration": {
+    "source_ref": null,
+    "checked_for_period": null,
+    "obligations_complete": null
+  },
+  "policy_check": {
+    "checked_on": null,
+    "source_refs": []
+  },
+  "obligations": [
+    {
+      "tax_kind": "vat",
+      "required": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "frequency": null,
+        "deadline": null,
+        "deadline_source": null
+      },
+      "facts": {
+        "coverage_start": null,
+        "coverage_end": null,
+        "evidence_refs": [],
+        "amounts": {
+          "invoiced_revenue": null,
+          "uninvoiced_revenue": null,
+          "exempt_revenue": null,
+          "other_revenue": null,
+          "costs_and_expenses": null,
+          "refunds_and_red_invoices": null,
+          "advance_receipts": null,
+          "tax_prepaid": null,
+          "carryforward_items": null,
+          "other_return_items": null,
+          "non_revenue_receipts": null
+        },
+        "checks": {
+          "all_receipt_channels_reconciled": null,
+          "invoice_records_reviewed": null,
+          "costs_reviewed": null,
+          "prior_returns_reviewed": null,
+          "portal_prefill_reviewed": null,
+          "tax_events_reviewed": null,
+          "deductions_and_carryforwards_reviewed": null
+        },
+        "flags": {
+          "unclassified_receipts": null,
+          "unresolved_tax_timing": null,
+          "special_transactions": null,
+          "nonzero_prefill": null
+        }
+      }
+    },
+    {
+      "tax_kind": "business_income_prepaid",
+      "required": null,
+      "period": {
+        "start": null,
+        "end": null,
+        "frequency": null,
+        "deadline": null,
+        "deadline_source": null
+      },
+      "facts": {
+        "coverage_start": null,
+        "coverage_end": null,
+        "evidence_refs": [],
+        "amounts": {
+          "invoiced_revenue": null,
+          "uninvoiced_revenue": null,
+          "exempt_revenue": null,
+          "other_revenue": null,
+          "costs_and_expenses": null,
+          "refunds_and_red_invoices": null,
+          "advance_receipts": null,
+          "tax_prepaid": null,
+          "carryforward_items": null,
+          "other_return_items": null,
+          "non_revenue_receipts": null
+        },
+        "checks": {
+          "all_receipt_channels_reconciled": null,
+          "invoice_records_reviewed": null,
+          "costs_reviewed": null,
+          "prior_returns_reviewed": null,
+          "portal_prefill_reviewed": null,
+          "tax_events_reviewed": null,
+          "deductions_and_carryforwards_reviewed": null
+        },
+        "flags": {
+          "unclassified_receipts": null,
+          "unresolved_tax_timing": null,
+          "special_transactions": null,
+          "nonzero_prefill": null
+        }
+      }
+    }
+  ]
+}

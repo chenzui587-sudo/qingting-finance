@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+.env
+.env.*
+private/
+cases/
+outputs/
+*.log
+*.zip
+
+# Real documents and credentials must live outside this repository.
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.pem
+*.key

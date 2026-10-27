@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "case_id": "demo-advance-membership-fee",
+  "mode": "synthetic",
+  "as_of": "2026-10-10",
+  "taxpayer": {
+    "entity_type": "individual_business",
+    "region": "虚构地区，仅作测试",
+    "vat_status": "small_scale",
+    "business_income_method": "actual",
+    "business_start_month": "2026-01"
+  },
+  "registration": {
+    "source_ref": "synthetic:registry",
+    "checked_for_period": true,
+    "obligations_complete": true
+  },
+  "policy_check": {
+    "checked_on": "2026-10-10",
+    "source_refs": [
+      "synthetic:policy-review-not-a-live-check"
+    ]
+  },
+  "obligations": [
+    {
+      "tax_kind": "vat",
+      "required": true,
+      "period": {
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "frequency": "quarterly",
+        "deadline": "2026-10-15",
+        "deadline_source": "synthetic:deadline-for-test-only-not-real-tax-calendar"
+      },
+      "facts": {
+        "coverage_start": "2026-07-01",
+        "coverage_end": "2026-09-30",
+        "evidence_refs": [
+          "synthetic:all-channels-invoices-costs-prior-returns-prefill-reviewed"
+        ],
+        "amounts": {
+          "invoiced_revenue": "0.00",
+          "uninvoiced_revenue": "0.00",
+          "exempt_revenue": "0.00",
+          "other_revenue": "0.00",
+          "costs_and_expenses": "0.00",
+          "refunds_and_red_invoices": "0.00",
+          "advance_receipts": "3600.00",
+          "tax_prepaid": "0.00",
+          "carryforward_items": "0.00",
+          "other_return_items": "0.00",
+          "non_revenue_receipts": "0.00"
+        },
+        "checks": {
+          "all_receipt_channels_reconciled": true,
+          "invoice_records_reviewed": true,
+          "costs_reviewed": true,
+          "prior_returns_reviewed": true,
+          "portal_prefill_reviewed": true,
+          "tax_events_reviewed": true,
+          "deductions_and_carryforwards_reviewed": true
+        },
+        "flags": {
+          "unclassified_receipts": false,
+          "unresolved_tax_timing": false,
+          "special_transactions": false,
+          "nonzero_prefill": false
+        }
+      }
+    },
+    {
+      "tax_kind": "business_income_prepaid",
+      "required": true,
+      "period": {
+        "start": "2026-07-01",
+        "end": "2026-09-30",
+        "frequency": "quarterly",
+        "deadline": "2026-10-15",
+        "deadline_source": "synthetic:deadline-for-test-only-not-real-tax-calendar"
+      },
+      "facts": {
+        "coverage_start": "2026-01-01",
+        "coverage_end": "2026-09-30",
+        "evidence_refs": [
+          "synthetic:all-channels-invoices-costs-prior-returns-prefill-reviewed"
+        ],
+        "amounts": {
+          "invoiced_revenue": "0.00",
+          "uninvoiced_revenue": "0.00",
+          "exempt_revenue": "0.00",
+          "other_revenue": "0.00",
+          "costs_and_expenses": "0.00",
+          "refunds_and_red_invoices": "0.00",
+          "advance_receipts": "3600.00",
+          "tax_prepaid": "0.00",
+          "carryforward_items": "0.00",
+          "other_return_items": "0.00",
+          "non_revenue_receipts": "0.00"
+        },
+        "checks": {
+          "all_receipt_channels_reconciled": true,
+          "invoice_records_reviewed": true,
+          "costs_reviewed": true,
+          "prior_returns_reviewed": true,
+          "portal_prefill_reviewed": true,
+          "tax_events_reviewed": true,
+          "deductions_and_carryforwards_reviewed": true
+        },
+        "flags": {
+          "unclassified_receipts": false,
+          "unresolved_tax_timing": false,
+          "special_transactions": false,
+          "nonzero_prefill": false
+        }
+      }
+    }
+  ]
+}
