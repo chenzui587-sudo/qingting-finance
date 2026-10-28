@@ -4,7 +4,7 @@
 
 面向中国大陆个体工商户的财税 Agent Skill。帮助 Codex 等支持 Agent Skills 的助手核对经营事实、识别不能直接填零的情况，并生成逐税种申报准备底稿。
 
-当前版本 **0.1.0 · 早期试用**。本地程序和虚构场景已测试，尚未经过真实税务系统逐表验收或独立税务专业人员审核。它不提供自动报税 API，不把“零业务候选”当作申报完成。
+当前版本 **0.2.0 · 早期试用**。本地零申报检查程序和虚构场景已测试；新增社保增减员、缴费与周期任务的协作流程。尚未经过真实税务/社保系统逐表验收或独立税务专业人员审核。它不提供自动报税 API，不把“零业务候选”当作申报完成。
 
 ## 解决什么问题
 
@@ -24,8 +24,12 @@
 - 逐税种期间检查、年内累计检查、非零事项与资料缺口提示。
 - 本地 JSON / Markdown 草稿与后续申报回执清单。
 - 其他税费与年度汇算保留为待办，不自动判定无需申报。
+- 社保增减员的资料、变更预览、受理及生效回查流程；区分单位职工和灵活就业参保。
+- 定时核对官方社保代扣结果，或准备经授权的缴费协作任务；实际所在地、身份、执行模式和时间确定后再接入调度工具。
 
-不包含：正式计税、发票验真、真实流水自动识别、税务账号登录、自动提交、缴款、年度汇算计算。一般纳税人、核定征收、特殊业务、逾期和更正等转进一步核对。
+检查脚本不包含：正式计税、发票验真、真实流水自动识别、税务账号登录、自动提交、缴款、年度汇算计算。一般纳税人、核定征收、特殊业务、逾期和更正等转进一步核对。
+
+社保支持目前是 Agent 办理核对流程，**不是已验证的各地社保 API 或自动扣费服务**。官方银行代扣与 AI 定时任务分开：建立提醒不会开通代扣，任务运行成功不代表缴费成功。参考 [社保与定时任务](references/social-insurance.md)。
 
 ## 使用
 
@@ -62,6 +66,8 @@ ln -s "$PWD" "${CODEX_HOME:-$HOME/.codex}/skills/qingting-finance"
 - [references/input.md](references/input.md)：输入口径及状态含义。
 - [references/policies.md](references/policies.md)：官方依据、日期和适用范围。
 - [references/filing.md](references/filing.md)：实际办理与回执核对。
+- [references/social-insurance.md](references/social-insurance.md)：社保增减员及定时缴费流程。
+- [assets/social-insurance-workpaper.md](assets/social-insurance-workpaper.md)：私有办理事项和任务定义模板。
 - [scripts/assess_zero.py](scripts/assess_zero.py)：离线检查器。
 - [tests/test_assess_zero.py](tests/test_assess_zero.py)：可复现的合成案例测试。
 - [VALIDATION.md](VALIDATION.md)：本版验证结果与尚未覆盖的验收。

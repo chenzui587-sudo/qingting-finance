@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import sys
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 SUPPORTED_YEAR = 2026
 POLICY_SNAPSHOT = "2026-10-27"
 AMOUNTS = (

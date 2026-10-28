@@ -1,4 +1,4 @@
 interface:
   display_name: "蜻蜓财务"
-  short_description: "核查中国个体户零申报条件，整理逐税种底稿、待办与申报回执"
+  short_description: "核查个体户零申报条件，协助社保增减员及定时缴费结果核对"
   default_prompt: "使用 $qingting-finance 帮我核对个体户本期是否符合零申报条件，先利用已有资料，再列出缺项并生成申报准备底稿。"
